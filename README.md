@@ -5,8 +5,4 @@ based on antdpro init project
 about 10 elems tested
 
 ## TODO：
-more examples/
-
-more elems/
-
-doc
+more examples/more elems/doc
