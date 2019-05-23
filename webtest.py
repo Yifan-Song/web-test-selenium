@@ -5,7 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 
 wait_time1 = 1
-wait_time2 = 5
+wait_time2 = 3
 
 def equalDate(d1, d2):
     date1 = d1.split('-')
@@ -257,9 +257,11 @@ class WebTest:
             print("ALL TEST PASSED")
         else:
             print("SOME ERROR OCCURED")
+        self.browser.close()
     
 def main():
     webtest = WebTest("http://127.0.0.1:8000/user/login")
     webtest.testWebPage()
+    exit(0)
 
 main()
