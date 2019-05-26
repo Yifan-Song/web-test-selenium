@@ -22,6 +22,7 @@ class WebTest:
     browser = webdriver.Chrome()
     def __init__(self, url):
         self.browser.get(url)
+        self.browser.maximize_window()
 
     def testInput(self):
         usernameInput = self.browser.find_element_by_id('userName')
@@ -238,7 +239,6 @@ class WebTest:
         alertClose = self.browser.find_element_by_xpath('//*[@id="root"]/div/section/section/main/div/div[2]/div/div/div/form/div[1]/a')
         alertClose.click()
         time.sleep(wait_time1)
-        #TODO:如何检测元素已经消失
         #print(EC.presence_of_element_located((By.XPATH, '//*[@id="root"]/div/section/section/main/div/div[2]/div/div/div/form/div[1]')))
         print("ALERT TEST PASSED")
         return 1
